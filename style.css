@@ -94,7 +94,7 @@ td:first-child {
 
 /* ================= FOOTER LOGO (FULL WIDTH) ================= */
 .footer-logo {
-    width: auto;
+    width: 100%;
     object-fit: contain;
     display: block;
     margin-top: 20px;
