@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: sans-serif;
+-webkit-text-size-adjust: 100%;">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <title id="div_titleTop">Government of the Punjab - eStamping Citizen Portal</title>
+    <link href="/eStampCitizenPortal/Content/css?v=ABOzXaCQalcYxSLjsqVCHglwVSTuSGlt_IGD6yQMVtA1" rel="stylesheet" />
+
+    <script src="/eStampCitizenPortal/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+
+    <script src="/eStampCitizenPortal/bundles/jquery?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+
+    <script src="/eStampCitizenPortal/bundles/bootstrap?v=2Fz3B0iizV2NnnamQFrx-NbYJNTFeBJ2GM05SilbtQU1"></script>
+
+
+    <link href="/eStampCitizenPortal/Content/kendo/css?v=MngViPMfDqvTC0CSHa-0Ca7K5W0HilZLK3dq7LN9p-01" rel="stylesheet" />
+
+    <script src="/eStampCitizenPortal/bundles/kendo?v=EtsCfpp7QKg7DhGxBuYhXt78cREbEU6cmV_Tl-CpfCw1"></script>
+
+    <script src="/eStampCitizenPortal/Scripts/ViewsScripts/ViewChallan.js?ver=78"></script>
+    <script src="/eStampCitizenPortal/Scripts/ViewsScripts/Common.js?ver=78"></script>
+    <link href="/eStampCitizenPortal/content/materialcss/roboto.css" rel="stylesheet">
+    <link href="/eStampCitizenPortal/content/materialcss/material.min.css" rel="stylesheet">
+    <link href="/eStampCitizenPortal/content/materialcss/ripples.min.css" rel="stylesheet">
+
+    <link href="/eStampCitizenPortal/Content/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+    <link href="/eStampCitizenPortal/Content/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href="/eStampCitizenPortal/Content/HomePage.css?ver=2" rel="stylesheet" />
+
+
+
+    <style>
+        body {
+            vertical-align: middle;
+            /*word-spacing: 2px;*/
+        }
+
+        .form-control {
+            font-family: 'Lato', sans-serif !important;
+            font-size: 14px;
+        }
+
+        .KendoText {
+            width: 350px;
+        }
+
+        .top15 {
+            top: 0px !important;
+        }
+
+        .KendoList {
+            width: 280px;
+        }
+
+        .k-dropdown-wrap {
+            border: 0px;
+            border-bottom: 1px solid #ccc !important;
+        }
+
+        .k-state-hover {
+            background-color: white !important;
+        }
+
+        .k-state-focused {
+            border: 0px;
+        }
+
+        label.error {
+            font-size: 12px;
+            color: #f44336;
+            font-weight: 100;
+        }
+
+        .k-invalid-msg .text-danger {
+            font-size: 10px;
+            font-family: 'Lato', sans-serif !important;
+            border: 0px;
+        }
+
+        .addFormElement {
+            font-style: normal;
+        }
+
+        h1 {
+            font-family: 'Crete Round', serif;
+            font-size: 26px;
+        }
+
+        .panel-heading {
+            font-family: 'Crete Round', serif;
+            font-size: 20px;
+        }
+
+        label {
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+        }
+
+        .k-widget.k-tooltip-validation {
+            border-color: #FFFFFF;
+            background-color: rgba(255, 255, 255, 0);
+            color: #F70A0A;
+            font-size: 10px;
+            font-family: 'Lato', sans-serif !important;
+        }
+
+        .k-widget {
+            background-color: white;
+        }
+
+        .logo-header {
+            width: 100%;
+            height: 110px;
+            background-color: #38922e !important;
+        }
+
+        .GOP-logo {
+            margin-top: 1%;
+            margin-left: 1%;
+        }
+
+        .Header-Links {
+            font-weight: bold;
+        }
+
+        .panel-heading {
+            background-color: #eeeeee !important;
+        }
+
+        .navigation-bar {
+            width: 100%;
+            height: 25px;
+            background-color: #e3e3e3 !important;
+            opacity: 0.9;
+            line-height: 25px;
+            font-size: 14px;
+            padding-left: 1%;
+        }
+
+        .link-nav {
+            /*color: #4f504f !important;*/
+            color: black;
+            text-decoration: none !important;
+        }
+
+        .urduFont {
+            font-family: MehrNastaliqWeb;
+        }
+
+        .urduFont::-webkit-input-placeholder {
+            font-family: MehrNastaliqWeb, 'Lato', sans-serif;
+            /*Arial, Helvetica, sans-serif*/
+            ;
+        }
+
+        .mainLoginInput:-ms-input-placeholder {
+            font-family: 'myFont', Arial, Helvetica, sans-serif;
+        }
+
+        .mainLoginInput:-moz-placeholder {
+            font-family: 'myFont', Arial, Helvetica, sans-serif;
+        }
+
+        .mainLoginInput::-moz-placeholder {
+            font-family: 'myFont', Arial, Helvetica, sans-serif;
+        }
+
+        /* ============================ */
+
+        .Header-Bar {
+            font-size: 13px;
+            color: #042a27;
+            font-family: 'Montserrat', sans-serif;
+            height: 25px;
+            background-color: #d7f4e1;
+            padding: 2px;
+            width: 97%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .Header-container {
+            width: 100%;
+            background-color: #d7f4e1;
+            height: 30px;
+        }
+
+        #wrapper {
+            min-height: 100%;
+            position: relative;
+        }
+
+        .pull-left {
+            float: left !important;
+        }
+
+        .container {
+            background-color: transparent;
+            padding-bottom: 40px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .body-content {
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 100%;
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1170px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                /* max-width: 970px; */
+                max-width: 1200px;
+                margin-left: 135px;
+            }
+        }
+
+        /* @media (min-width: 768px) {
+    .container {
+    max-width: 750px;
+}
+
+} */
+
+        .table-bordered {
+            border: 1px solid #ddd;
+        }
+
+        .table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .tHead {
+            width: 30%;
+        }
+
+        table {
+            max-width: 100%;
+            background-color: transparent;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .wrapper_footer_container {
+            /* background-color: #c0cac3; */
+            background-color: #58585b;
+        }
+
+        .left-icon-circle {
+            font-size: 14px;
+            /* margin-left: 6px; */
+        }
+
+        .float-left {
+            margin-top: 2px;
+            display: block;
+            float: left;
+        }
+
+        .iconic-circle {
+            background-color: #CCCCCC;
+            border-radius: 7px;
+            padding-right: 2px;
+            padding-left: 2px;
+        }
+
+        .margin-text {
+            margin-top: 4px !important;
+            margin-left: 2px;
+        }
+
+        #footer {
+            padding-top: 1% !important;
+            padding-left: 8% !important;
+            padding-right: 8% !important;
+            min-height: 160px;
+            /* background-color: #c0cac3; */
+            background-color: #58585b;
+            text-align: left;
+            /* padding-bottom: 5%; */
+            padding-bottom: 0%;
+        }
+
+        #shadow-line {
+            border-bottom: 0.01em solid #867F7D !important;
+        }
+
+        .wrapper_footer_logo_container {
+            width: 100%;
+            /* background-color: #c0cac3 !important; */
+            background-color: #58585b !important;
+        }
+
+        .wrapper_logo_container_bottom {
+            width: 100%;
+            /* background-color: #c0cac3 !important; */
+            background-color: #58585b !important;
+        }
+
+        #logo-footer {
+            background-image: url(./footer-Logos.png);
+            background-position: center;
+            background-size: contain;
+            /* background-color: #c0cac3; */
+            background-color: #58585b;
+            height: 50px;
+            padding-bottom: 10px !important;
+            background-repeat: no-repeat;
+        }
+
+        .text-heading-footer {
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            /* color: #505351; */
+            color: white;
+        }
+
+        .tab-pane {
+            margin-bottom: 2.5% !important;
+        }
+
+        .tabs-footer {
+            text-align: center;
+            padding: 5px !important;
+            /* border-bottom: 1px solid #b2bbb5 !important; */
+            border-bottom: 1px solid #867F7D !important;
+            /* border-bottom: 1px solid #A7A9AC !important; */
+            /* color: #505351; */
+            color: white;
+            font-size: 14px;
+            padding-left: 0px !important;
+            margin-top: 4% !important;
+        }
+
+        .footer-copyrights-text {
+            width: 100%;
+            height: 20px;
+            /* color: #505351; */
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        #loader-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="loader-overlay">
+        <div class="loader"></div>
+    </div>
+
+
+    <div id="wrapper">
+        <div class="Header-container">
+            <div class="Header-Bar">
+                <div class="pull-left contact" style="display: contents;">
+
+                    <div class="left-icon-circle float-left iconic-circle" style="height:22px; width:20px; margin-left:0px;">
+                        <a class="social-text float-left fa fa-home" style="color: #428bca;"></a>
+                    </div>
+                    <div class="margin-text left-icon-circle float-left" style="width: 13.359px; height: 20px; margin-top: 2px !important;">
+                        <i class="social-text fa fa-phone fa-flip-horizontal"></i>
+                    </div>
+
+                    <div class="margin-text floating-left-text" id="helpLine">(042) 111-22-22-77 (Monday to Saturday 8:00 AM - 5:00 PM)</div>
+                    <div style="clear:both"></div>
+                </div>
+
+
+                <div class="pull-right">
+
+
+                    <div style="clear:both"></div>
+                </div>
+            </div>
+        </div>
+        <div class="logo-header">
+
+            <img class="GOP-logo" id="Logo-Estamp-en-1" src="./Logo-eStamp.png" />
+        </div>
+
+        <div class="navigation-bar" id="div_nav">
+            <a class="link-nav" href="https://es.punjab-zameen.gov.pk/eStampCitizenPortal/ChallanFormView/HomePage" id="div_home">Home</a>
+
+        </div>
+
+        <div class="container">
+            <center>
+                <h1 style="font-size:28px;font-family:'Crete Round', serif;text-align:center" id="div_title"></h1>
+            </center>
+        </div>
+
+
+        <div class="container body-content">
+
+            <label style="font-size:20px;margin-bottom:10px;"><strong> eStamp Online Verification</strong></label>
+            <table class="table table-bordered">
+                <tbody id='outputCell'>
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="wrapper_footer_container">
+            <div id="footer" class="container">
+                <div class="row" style="margin-bottom:15px !important;">
+                    <center>
+                        <div class="col-md-4  tab-pane">
+                            <div class="text-heading-footer" style="color:white !important; direction:rtl;">About Us
+                            </div>
+                            <a style="color:white !important;">
+                                <div class="tabs-footer col-lg-12" id="eStampingFooter">e-Stamping</div>
+                            </a>
+                            <a style="color:white !important;">
+                                <div class="tabs-footer col-lg-12" id="boardOfRevFooter">Board Of Revenue</div>
+                            </a>
+
+                        </div>
+                        <div class="col-md-4  tab-pane">
+                            <div class="text-heading-footer" id="div_contactUs">Contact Us</div>
+                            <div class="tabs-footer col-lg-12" style="cursor:text;pointer-events:none" id="emailFooter">
+                                Email: <span>estamp-support@punjab-zameen.gov.pk</span></div>
+                            <a style="color:white !important;">
+                                <div class="tabs-footer col-lg-12">FAQs</div>
+                            </a>
+
+                        </div>
+                    </center>
+                </div>
+                <div id="shadow-line"></div>
+            </div>
+        </div>
+
+        <div class="wrapper_footer_logo_container">
+            <div class="wrapper_logo_container_bottom">
+                <br />
+                <div id="logo-footer" class="logo-footer container">
+                </div>
+                <div class="footer-copyrights-text">
+                    © Copyrights GOP<span style="margin-left:3px;" id="currentYear"></span> , All Rights Reserved
+                </div><br />
+            </div>
+        </div>
+
+    </div>
+    <script src="/eStampCitizenPortal/scripts/materialjs/ripples.min.js"></script>
+    <script src="/eStampCitizenPortal/scripts/materialjs/material.min.js"></script>
+    <script src="/eStampCitizenPortal/Scripts/jquery.validate.min.js"></script>
+    <script src="/eStampCitizenPortal/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $.material.init();
+            var today = new Date();
+            var year = today.getFullYear();
+            $('#currentYear').html(year);
+
+            var baseUrl = "../Scripts/kendo/messages/kendo.messages.";
+            var cultureInfo = 'en-US'
+            $.getScript(baseUrl + cultureInfo + ".min.js", function() {
+
+            });
+        });
+
+
+        const currentUrl = window.location.href;
+        // const currentUrl = 'https://es.punjab.gov.pk/eStampCitizenPortal/GeneratePDF/Stamp_Receipt?id=PB-LHR-896998E55A9DE326'
+        const url = new URL(currentUrl);
+        console.log(">>>>>", url)
+        let idValue = url.searchParams.get("id");
+        const stampId = url.searchParams.get("sid");
+        console.log(idValue);
+        let mainData;
+        let labelOf;
+        document.addEventListener('DOMContentLoaded', getStampData);
+
+        function filterObject(obj, filter = [undefined, null]) {
+            Object.keys(obj).forEach((key) =>
+                filter.includes(obj[key]) ? delete obj[key] : {}
+            );
+            return obj;
+        }
+
+        function objectToQuery(object) {
+            const queryString = new URLSearchParams(object).toString();
+            if (queryString) return "?" + queryString;
+            else return "";
+        }
+
+        function getStampData() {
+            document.getElementById('loader-overlay').style.display = 'flex';
+
+            fetch('https://sapi.punjab-zameen.pk/api/stamp/by' + objectToQuery(filterObject({
+                    id: idValue,
+                    stampId: stampId
+                })))
+                .then(function(response) {
+                    if (response.ok) {
+                        return response.text();
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(function(data) {
+                    mainData = JSON.parse(data);
+                    console.log(">>>Main", mainData);
+
+                    loadTitle(mainData);
+                    loadRecord(mainData);
+
+
+                    document.getElementById('loader-overlay').style.display = 'none';
+                })
+                .catch(function(error) {
+                    console.log('Error:', error.message);
+
+                    document.getElementById('loader-overlay').style.display = 'none';
+                });
+        }
+
+        // function loadTitle(data) {
+        //     console.log("><<Dtaa here>>", data)
+        //         debugger
+        //     let label = 'S/O';
+
+        //     if (data.wife == true) {
+        //         label = 'W/O';
+        //     } else if (data.daughter == true) {
+        //         label = 'D/O';
+        //     } else {
+        //         label = 'S/O';
+        //     }
+
+        //     // Select the table cell containing the label and update its content
+        //     const labelCell = document.querySelector('#myTable tr th.tLabel');
+        //     labelCell.textContent = label;
+        // }
+
+        function loadTitle(data) {
+
+            console.log("><<Dtaa here>>", data)
+
+            labelOf = 'S/O';
+
+            if (data.wife == true) {
+                labelOf = 'W/O';
+            } else if (data.daughter == true) {
+                labelOf = 'D/O';
+            } else {
+                labelOf = 'S/O';
+            }
+
+            // Select the table cell containing the labelOf and update its content
+            // const labelCell = document.querySelector('#myTable th.tLabel');
+            // let labelCell;
+            // if (labelCell) {
+            //     labelCell.textContent = labelOf;
+            // } else {
+            //     console.error('Label cell not found in the DOM.');
+            // }
+        }
+
+
+
+
+        function formatDateTime(dateTimeStr) {
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            const dateTimeParts = dateTimeStr.split(', ');
+            const datePart = dateTimeParts[0];
+            const timePart = dateTimeParts[1];
+
+            const dateParts = datePart.split('/');
+            const day = parseInt(dateParts[1], 10);
+            const month = months[parseInt(dateParts[0], 10) - 1];
+            const year = parseInt(dateParts[2], 10);
+
+            const timeParts = timePart.split(' ');
+            const time = timeParts[0];
+            const ampm = timeParts[1];
+            const [hours, minutes, seconds] = time.split(':');
+
+            return `${day}-${month}-${year} ${hours}:${minutes}:${seconds} ${ampm}`;
+        }
+
+
+        function formatDate(dateStr) {
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+            const date = new Date(dateStr);
+            const day = date.getDate();
+            const month = months[date.getMonth()];
+            const year = date.getFullYear();
+
+            return `${day}-${month}-${year}`;
+        }
+
+        function toCamelCase(str) {
+            const words = str.split(' ');
+            const camelCaseWords = words.map((word, index) => {
+                if (index === 0) {
+                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                } else {
+                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                }
+            });
+            return camelCaseWords.join(' ');
+        }
+
+
+        function loadRecord(mainData) {
+            const apiDataCell = document.getElementById('outputCell');
+            let html = '';
+            let data = mainData;
+
+            html += `
+        <span style="font-size: 17px;">
+            <table id="myTable">
+                <tr>
+                    <th class="tHead" scope="row">eStamp ID</th>
+                    <td>${data.stampId}</td>
+                </tr>
+                <tr>
+                    <th class="tHead" scope="row">Type</th>
+                    <td>${data.type}</td>
+                </tr>
+                <tr>
+                    <th class="tHead" scope="row">Amount</th>
+                    <td>Rs ${data.amount}/-</td>
+                </tr>
+                <tr>
+                    <th class="tHead" scope="row">Description</th>
+                    <td>${data.description}</td>
+                </tr>
+                <tr>
+                    <th class="tHead" scope="row">Applicant</th>
+                    <td>${data.applicant}</td>
+                </tr>
+      
+                <tr>
+                    <th class="tHead tLabel" scope="row">${data.wife ? 'W/O' : data.daughter ? 'D/O' : 'S/O'}</th>
+                    <td>${data.fatherName}</td>
+                </tr>
+                <tr>
+                    <th class="tHead" scope="row">Address</th>
+                    <td>${data.address}</td>
+                </tr>
+                <tr>
+                    <th class="tHead" scope="row">Issue Date</th>
+                    <td>${data.createdAt ? dayjs(data.createdAt).format('D-MMM-YYYY h:mm:ss A') : formatDateTime(data.issueDate)}</td>
+                </tr>
+                <tr>
+                    <th class="tHead" scope="row">Delisted on/Validity</th>
+                    <td>${data.validTill ? dayjs(data.validTill).format('D-MMM-YYYY') : formatDate(data.validityDate)}</td>
+                </tr>
+                <tr>
+                    <th class="tHead" scope="row">Amount in Words</th>
+                    <td>${toCamelCase(data.amountInWords)} Rupees Only</td>
+                </tr>
+                <tr>
+                    <th class="tHead" scope="row">Reason</th>
+                    <td>${data.reason}</td>
+                </tr>
+                <tr>
+                    <th class="tHead" scope="row">Vendor Information</th>
+                    <td>${data.vendorInformation}</td>
+                </tr>
+            </table>
+        </span>
+    `;
+
+            apiDataCell.innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>
