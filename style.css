@@ -19,8 +19,8 @@ body {
 }
 
 .banner .logo {
-    width: 200%;
-    height: 200%;
+    width: 100%;
+    height: 100%;
     display: block;
     background: #2e7d32;
 }
