@@ -19,7 +19,8 @@ body {
 }
 
 .banner .logo {
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     height: auto;
     display: block;
     background: #2e7d32;
