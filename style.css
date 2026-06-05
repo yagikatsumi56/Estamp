@@ -13,7 +13,7 @@ body {
     font-size: 14px;
 }
 
-/* ================= BANNER (FULL WIDTH FIX) ================= */
+/* ================= BANNER (FULL WIDTH LOGO) ================= */
 .banner {
     background: #2e7d32;
     padding: 0;
@@ -36,9 +36,10 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
-/* ================= MAIN BOX ================= */
+/* ================= MAIN CONTAINER (FIXED WIDTH) ================= */
 .container {
-    width: 600px;
+    max-width: 600px;
+    width: 90%;
     margin: 20px auto;
     background: white;
     padding: 20px;
@@ -56,11 +57,13 @@ table {
     width: 100%;
     border-collapse: collapse;
     font-size: 14px;
+    table-layout: fixed;
 }
 
 td {
     border: 1px solid #ddd;
     padding: 10px;
+    word-wrap: break-word;
 }
 
 td:first-child {
@@ -89,7 +92,7 @@ td:first-child {
     color: #ccc;
 }
 
-/* ================= FOOTER LOGO (FULL WIDTH FIX) ================= */
+/* ================= FOOTER LOGO (FULL WIDTH) ================= */
 .footer-logo {
     width: 100%;
     max-height: 140px;
