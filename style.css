@@ -19,8 +19,8 @@ body {
 }
 
 .banner .logo {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     display: block;
     background: #2e7d32;
 }
@@ -86,7 +86,7 @@ td:first-child {
 
 /* ================= FOOTER LOGO FULL WIDTH ================= */
 .footer-logo {
-    width: 100%;
+    width: auto;
     height: auto;
     display: block;
     margin-top: 20px;
