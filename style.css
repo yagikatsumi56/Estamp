@@ -1,6 +1,7 @@
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
     background: #f4f4f4;
 }
 
@@ -12,28 +13,30 @@ body {
     font-size: 14px;
 }
 
-/* ================= BANNER LOGO FULL WIDTH ================= */
+/* ================= BANNER (FULL WIDTH FIX) ================= */
 .banner {
     background: #2e7d32;
     padding: 0;
+    margin: 0;
 }
 
 .banner .logo {
-    width: auto;
-    height: auto;
+    width: 100%;
+    max-height: 140px;
+    object-fit: contain;
     display: block;
-    background: #2e7d32;
 }
 
-/* ================= NAV ================= */
+/* ================= NAV BAR ================= */
 .nav-bar {
     background: #e0e0e0;
     padding: 10px 20px;
-    border-bottom: 1px solid #ccc;
     font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
 }
 
-/* ================= MAIN CONTAINER ================= */
+/* ================= MAIN BOX ================= */
 .container {
     width: 600px;
     margin: 20px auto;
@@ -44,14 +47,15 @@ body {
 
 /* TITLE */
 h2 {
-    margin-bottom: 15px;
     color: #333;
+    margin-bottom: 15px;
 }
 
 /* ================= TABLE ================= */
 table {
-    width: auto;
+    width: 100%;
     border-collapse: collapse;
+    font-size: 14px;
 }
 
 td {
@@ -71,6 +75,7 @@ td:first-child {
     color: white;
     text-align: center;
     padding: 30px 20px;
+    margin-top: 30px;
 }
 
 /* FOOTER TEXT */
@@ -84,11 +89,11 @@ td:first-child {
     color: #ccc;
 }
 
-/* ================= FOOTER LOGO FULL WIDTH ================= */
+/* ================= FOOTER LOGO (FULL WIDTH FIX) ================= */
 .footer-logo {
-    width: auto;
-    height: auto;
+    width: 100%;
+    max-height: 140px;
+    object-fit: contain;
     display: block;
     margin-top: 20px;
-    object-fit: contain;
 }
